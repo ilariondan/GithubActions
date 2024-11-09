@@ -9,6 +9,7 @@ namespace GithubActionsLab
         [Test]
         public void Add_Valid_Danilchenko()
         {
+            Console.WriteLine("Running test: Add_Valid_Danilchenko");
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
             Assert.AreEqual(12, Program.Add("5", "7"));
@@ -16,7 +17,8 @@ namespace GithubActionsLab
 
         [Test]
         public void Add_Invalid_Danilchenko()
-        {
+        {    
+            Console.WriteLine("Running test: Add_Valid_Danilchenko");
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
             Assert.Throws<FormatException>(() => Program.Add("a", "a"));
@@ -24,7 +26,8 @@ namespace GithubActionsLab
 
         [Test]
         public void Add_Null_Danilchenko()
-        {
+        {    
+            Console.WriteLine("Running test: Add_Valid_Danilchenko");
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
